@@ -2,13 +2,108 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="/css/materialize.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="/css/materialize.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
+	<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">1</a></li>
+  <li><a href="#!">2</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">3</a></li>
+  <li><a href="#!">4</a></li>
+  <li><a href="#!">5</a></li>
+</ul>
+<ul id="dropdown2" class="dropdown-content">
+  <li><a href="#!">1</a></li>
+  <li><a href="#!">2</a></li>
+</ul>
+<ul id="dropdown3" class="dropdown-content">
+  <li><a href="#!">1</a></li>
+  <li><a href="#!">2</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">3</a></li>
+</ul>
+	<nav style="background-color: #005883;">
+    <div class="nav-wrapper" style="margin-left: 20px; ">
+      <a href="#" class="brand-logo" ><b>ECBTI</b></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Inicio</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Lecturas<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Multimedia<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Actividades<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a href="sass.html">Autor</a></li>
+      </ul>
+    </div>
+  </nav>
+        
+<div class="container">
+
+    <div class="row">
+
+      <div class="col s9">
+        <!-- Grey navigation panel -->
+       <h2 style="color:  #F47920;" >PROGRAMACIÓN WEB 1</h2>
+       <div class="col s6"><img src="/img/php.jpg"></div>
+       <div class="col s6"><img src="/img/mysql.jpg"></div>
+
+       <div class="col s12">
+       	<h3 style="color:  #F47920;">Objetivo de OVI</h3>
+       	<p>
+       		Con la creación de este OVI se quiere dar a conocer los conocimientos previos a tener en cuenta para la conexión de una base de datos con el lenguaje de programación PHP, para tal fin se implementará una serie de temáticas para exponer y dar a conocer los procesos necesarios que se llevaran a cabo para realización de esta misma.
+       	</p>
+       	<h4 style="color:  #F47920;">Objetivo Específicos</h4>
+       		<p>Analizar los elementos necesarios para realizar la conexión con base de datos, para tal fin se utilisará una serie de documentación detallada para una fácil compresión.</p>
+       			<p>Se organizan los pasos de vinculación con la base de datos en una página de PHP con las opciones de registro, consulta, modificar y eliminar, con el cual las personas entenderán y aprenderán a implementar un CRUD (create, read, update, and delete) en PHP</p>
+       			<p>Se podrá detallar mediante este OVI la visualización de documentos, videos, tutoriales y una serie de información que será de gran ayuda para todo aquel que lo consulte.</p>
 
 
+       		</ul>
+       </div>
+
+     </div>
+
+
+<!--menu sidebar-->
+      <div class="col s3">
+
+        <h2><img src="/img/logo_vertical.png"></h2>
+
+
+      </div>
+
+    </div>
+
+</div>
+ <footer class="page-footer" style="background-color: #005883;">
+          <div class="container">
+            <div class="row">
+              <div class="col s12">
+                <h5 class="white-text" style="color:  #F47920;">Universidad Nacional Abierta y a Distancia</h5>
+                <p class="grey-text text-lighten-4">Escuela de Ciencias Básicas, Tecnología e Ingeniería</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="https://www.unad.edu.co/">Visitenos</a>
+            </div>
+          </div>
+        </footer>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script type="text/javascript" src="/js/materialize.js"></script>
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+    $('.dropdown-trigger').dropdown();
+  });
+      
+</script>
 </body>
 </html>
