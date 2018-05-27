@@ -8,42 +8,25 @@
 
 </head>
 <body>
-<<<<<<< HEAD
-=======
 
->>>>>>> 06cb70aa31feb513133192c29bafe43f0ca76e67
     <!-- Dropdown Structure -->
   <ul id="dropdown1" class="dropdown-content">
-    <li><a href="Lectura1.html">1</a></li>
-    <li><a href="Lectura2.html">2</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">3</a></li>
+    <li><a href="Lectura1.html">MySQL</a></li>
+    <li><a href="Lectura2.html">Conexión BD</a></li>
+    <li><a href="Lectura3.html">Registros BD</a></li>
     <li><a href="#!">4</a></li>
     <li><a href="#!">5</a></li>
-  </ul>
-  <ul id="dropdown2" class="dropdown-content">
-    <li><a href="#!">1</a></li>
-    <li><a href="#!">2</a></li>
-  </ul>
-  <ul id="dropdown3" class="dropdown-content">
-    <li><a href="#!">1</a></li>
-    <li><a href="#!">2</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">3</a></li>
   </ul>
     <nav style="background-color: #005883;">
       <div class="nav-wrapper" style="margin-left: 20px; ">
         <a href="index.html" class="brand-logo" ><b>ECBTI</b></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="index.html">Inicio</a></li>
-          <li><a class="dropdown-trigger" href="Lectura1" data-target="dropdown1">Lecturas<i class="material-icons right">arrow_drop_down</i></a></li>
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Multimedia<i class="material-icons right">arrow_drop_down</i></a></li>
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Actividades<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Lecturas<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="sass.html">Autor</a></li>
         </ul>
       </div>
     </nav>
-        
   <div class="container">
     <div class="row">
 
@@ -57,25 +40,14 @@
           <p>mysql_connect(servidorBD, usuario, contraseña): abre una conexión con un servidor de bases de datos de MySQL, devuelve un identificador que se emplea en algunas de las siguientes funciones o FALSE en caso de error.</p>
           <p>mysql_select_db(nombreBD, identificador): selecciona una base de datos, devuelve TRUE en caso de éxito y FALSE en caso contrario.</p>
           <p>mysql_query(sentencia, identificador): ejecuta una sentencia SQL y devuelve un resultado (SELECT, SHOW, EXPLAIN o DESCRIBE, ...) o TRUE (INSERT, UPDATE, DELETE, ...) si todo es correcto, o FALSE en caso contrario.</p>
-<<<<<<< HEAD
+
           <?php require_once 'config.php';?>
-          <p>se selecciona</p>
+          <h6 style="color:  #F47920;">Conexión con la base de datos ecbti</h6>
+          <p>Se selecciona el servidor de la base de datos que en este caso es localhost, usuario, contraseña y por ultimo seleccionamos la base de datos ecbti, si la conexión no puede establecerse retorna error</p>
+          <img class="materialboxed responsive-img" src="img/4.png">
+
   
 
-=======
-
-  
-<?php
-require_once 'dbconfig.php';
- 
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    echo "Connected to $dbname at $host successfully.";
-} catch (PDOException $pe) {
-    die("Could not connect to the database $dbname :" . $pe->getMessage());
-} 
-?>
->>>>>>> 06cb70aa31feb513133192c29bafe43f0ca76e67
         </div>
 
       </div>
@@ -116,6 +88,7 @@ try {
   $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.dropdown-trigger').dropdown();
+    $('.materialboxed').materialbox();
   });
       
 </script>

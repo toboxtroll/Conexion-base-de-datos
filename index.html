@@ -10,31 +10,18 @@
 <body>
   	<!-- Dropdown Structure -->
   <ul id="dropdown1" class="dropdown-content">
-    <li><a href="Lectura1.html">1</a></li>
-    <li><a href="Lectura2.html">2</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">3</a></li>
+    <li><a href="Lectura1.html">MySQL</a></li>
+    <li><a href="Lectura2.html">Conexión BD</a></li>
+    <li><a href="Lectura3.html">Registros BD</a></li>
     <li><a href="#!">4</a></li>
     <li><a href="#!">5</a></li>
-  </ul>
-  <ul id="dropdown2" class="dropdown-content">
-    <li><a href="#!">1</a></li>
-    <li><a href="#!">2</a></li>
-  </ul>
-  <ul id="dropdown3" class="dropdown-content">
-    <li><a href="#!">1</a></li>
-    <li><a href="#!">2</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">3</a></li>
   </ul>
   	<nav style="background-color: #005883;">
       <div class="nav-wrapper" style="margin-left: 20px; ">
         <a href="index.html" class="brand-logo" ><b>ECBTI</b></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="index.html">Inicio</a></li>
-          <li><a class="dropdown-trigger" href="Lectura1" data-target="dropdown1">Lecturas<i class="material-icons right">arrow_drop_down</i></a></li>
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Multimedia<i class="material-icons right">arrow_drop_down</i></a></li>
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Actividades<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Lecturas<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="sass.html">Autor</a></li>
         </ul>
       </div>
@@ -97,6 +84,7 @@
   $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.dropdown-trigger').dropdown();
+    $('.materialboxed').materialbox();
   });
       
 </script>
