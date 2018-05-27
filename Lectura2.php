@@ -8,6 +8,10 @@
 
 </head>
 <body>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 06cb70aa31feb513133192c29bafe43f0ca76e67
     <!-- Dropdown Structure -->
   <ul id="dropdown1" class="dropdown-content">
     <li><a href="Lectura1.html">1</a></li>
@@ -53,10 +57,25 @@
           <p>mysql_connect(servidorBD, usuario, contraseña): abre una conexión con un servidor de bases de datos de MySQL, devuelve un identificador que se emplea en algunas de las siguientes funciones o FALSE en caso de error.</p>
           <p>mysql_select_db(nombreBD, identificador): selecciona una base de datos, devuelve TRUE en caso de éxito y FALSE en caso contrario.</p>
           <p>mysql_query(sentencia, identificador): ejecuta una sentencia SQL y devuelve un resultado (SELECT, SHOW, EXPLAIN o DESCRIBE, ...) o TRUE (INSERT, UPDATE, DELETE, ...) si todo es correcto, o FALSE en caso contrario.</p>
+<<<<<<< HEAD
           <?php require_once 'config.php';?>
           <p>se selecciona</p>
   
 
+=======
+
+  
+<?php
+require_once 'dbconfig.php';
+ 
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    echo "Connected to $dbname at $host successfully.";
+} catch (PDOException $pe) {
+    die("Could not connect to the database $dbname :" . $pe->getMessage());
+} 
+?>
+>>>>>>> 06cb70aa31feb513133192c29bafe43f0ca76e67
         </div>
 
       </div>
