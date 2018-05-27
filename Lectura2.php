@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+  <title>Home</title>
 <meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/materialize.css">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
-  	<!-- Dropdown Structure -->
+
+    <!-- Dropdown Structure -->
   <ul id="dropdown1" class="dropdown-content">
     <li><a href="Lectura1.html">1</a></li>
     <li><a href="Lectura2.html">2</a></li>
@@ -27,7 +28,7 @@
     <li class="divider"></li>
     <li><a href="#!">3</a></li>
   </ul>
-  	<nav style="background-color: #005883;">
+    <nav style="background-color: #005883;">
       <div class="nav-wrapper" style="margin-left: 20px; ">
         <a href="index.html" class="brand-logo" ><b>ECBTI</b></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -45,18 +46,26 @@
 
       <div class="col s9">
       <!-- Grey navigation panel -->
-        <h2 style="color:  #F47920;" >PROGRAMACIÓN WEB 1</h2>
-        <div class="col s6"><img src="img/php.jpg"></div>
-        <div class="col s6"><img src="img/mysql.jpg"></div>
+
         <div class="col s12">
-          <h3 style="color:  #F47920;">Objetivo de OVI</h3>
+          <h4 style="color:  #F47920;">Acceso a la base de datos desde PHP</h4>
           <p>
-          Con la creación de este OVI se quiere dar a conocer los conocimientos previos a tener en cuenta para la conexión de una base de datos con el lenguaje de programación PHP, para tal fin se implementará una serie de temáticas para exponer y dar a conocer los procesos necesarios que se llevaran a cabo para realización de esta misma.
-          </p>
-          <h4 style="color:  #F47920;">Objetivo Específicos</h4>
-          <p>Analizar los elementos necesarios para realizar la conexión con base de datos, para tal fin se utilisará una serie de documentación detallada para una fácil compresión.</p>
-          <p>Se organizan los pasos de vinculación con la base de datos en una página de PHP con las opciones de registro, consulta, modificar y eliminar, con el cual las personas entenderán y aprenderán a implementar un CRUD (create, read, update, and delete) en PHP</p>
-          <p>Se podrá detallar mediante este OVI la visualización de documentos, videos, tutoriales y una serie de información que será de gran ayuda para todo aquel que lo consulte.</p>
+          Desde PHP se puede acceder fácilmente a una base de datos en MySQL empleando las más de 50 funciones que existen. Las principales funciones que se emplean para acceder a una base de datos son:</p>
+          <p>mysql_connect(servidorBD, usuario, contraseña): abre una conexión con un servidor de bases de datos de MySQL, devuelve un identificador que se emplea en algunas de las siguientes funciones o FALSE en caso de error.</p>
+          <p>mysql_select_db(nombreBD, identificador): selecciona una base de datos, devuelve TRUE en caso de éxito y FALSE en caso contrario.</p>
+          <p>mysql_query(sentencia, identificador): ejecuta una sentencia SQL y devuelve un resultado (SELECT, SHOW, EXPLAIN o DESCRIBE, ...) o TRUE (INSERT, UPDATE, DELETE, ...) si todo es correcto, o FALSE en caso contrario.</p>
+
+  
+<?php
+require_once 'dbconfig.php';
+ 
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    echo "Connected to $dbname at $host successfully.";
+} catch (PDOException $pe) {
+    die("Could not connect to the database $dbname :" . $pe->getMessage());
+} 
+?>
         </div>
 
       </div>
