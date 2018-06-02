@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MySQL</title>
+	<title>Home</title>
 <meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/materialize.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -27,32 +27,38 @@
         </ul>
       </div>
     </nav>
+        </ul>
+      </div>
+    </nav>
         
   <div class="container">
     <div class="row">
 
       <div class="col s9">
-      <!-- Grey navigation panel 
-        <h2 style="color:  #F47920;" >PROGRAMACIÓN WEB 1</h2>
-        <div class="col s6"><img src="/img/php.jpg"></div>
-        <div class="col s6"><img src="/img/mysql.jpg"></div>-->
-
-        <div class="col s12">
-          <h4 style="color:  #F47920;">My SQL</h4>
-          <p>Es el sistema gestor de bases de datos de código abierto más popular en la actualidad. MySQL está disponible para distintos sistemas operativos, como Linux, Mac OS X, Solaris, Windows y otros más. MySQL es muy popular en el desarrollo de aplicaciones web, ya que forma parte como sistema gestor de bases de datos de las plataformas LAMP, BAMP, MAMP y WAMP.</p>
-          <h5 style="color:  #F47920;">Creación de base de datos con phpMyAdmin</h5>
-          <p>Se creará una base de datos llamada ecbti para almacenar los datos que emplea el sitio web. la cual tendra una tabla llamada estudiantes con las columnas nombre, fechaNac, carrera, telefono, email.</p>
-          <h6>Creación base de datos ecbti</h6>
-          <img class="materialboxed responsive-img" src="img/1.png">
-          <h6>Creación de la tabla estudiantes</h6>
-          <img class="materialboxed responsive-img" src="img/2.png">
-          <h6>Columnas con tipo de dato más apropiado para cada columna</h6>
-          <img class="materialboxed responsive-img" src="img/3.png">
-          <p>Con esto tendriamos la base de datos lista</p>
-        </div>
+      <!-- Grey navigation panel -->
+          <div class="row">
 
 
-      </div>
+    <h5 style="color:  #F47920;">
+
+    <?php
+
+	require 'config.php';
+
+	mysqli_query($con, "insert into estudiantes(nombre, cc, carrera, email, telefono)
+				 values('$_POST[nombre]','$_POST[cc]','$_POST[carrera]','$_POST[email]','$_POST[telefono]')") or die("Problemas en la base de datos".mysqli_error($con));
+	mysql_close($con);
+
+	echo "registro exitoso";
+
+?>
+
+Se ha creado al estudiante exitosamente
+</h5>
+
+  </div>
+        
+  </div>
 
 
       <!--menu sidebar-->
@@ -99,3 +105,28 @@
 </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
+<?php
+
+	require 'config.php';
+
+	mysqli_query($con, "insert into estudiantes(nombre, cc, carrera, email, telefono)
+				 values('$_POST[nombre]','$_POST[cc]','$_POST[carrera]','$_POST[email]','$_POST[telefono]')") or die("Problemas en la base de datos".mysqli_error($con));
+	mysql_close($con);
+
+	echo "registro exitoso";
+
+?>
+
+</body>
+</html>
+
+

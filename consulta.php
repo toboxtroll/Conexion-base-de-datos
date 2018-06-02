@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MySQL</title>
+  <title>Videos</title>
 <meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/materialize.css">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
-  	<!-- Dropdown Structure -->
+
+    <!-- Dropdown Structure -->
   <ul id="dropdown1" class="dropdown-content">
     <li><a href="Lectura1.html">MySQL</a></li>
     <li><a href="Lectura2.html">Conexión BD</a></li>
@@ -27,30 +28,49 @@
         </ul>
       </div>
     </nav>
-        
   <div class="container">
     <div class="row">
 
       <div class="col s9">
-      <!-- Grey navigation panel 
-        <h2 style="color:  #F47920;" >PROGRAMACIÓN WEB 1</h2>
-        <div class="col s6"><img src="/img/php.jpg"></div>
-        <div class="col s6"><img src="/img/mysql.jpg"></div>-->
+      <!-- Grey navigation panel -->
 
         <div class="col s12">
-          <h4 style="color:  #F47920;">My SQL</h4>
-          <p>Es el sistema gestor de bases de datos de código abierto más popular en la actualidad. MySQL está disponible para distintos sistemas operativos, como Linux, Mac OS X, Solaris, Windows y otros más. MySQL es muy popular en el desarrollo de aplicaciones web, ya que forma parte como sistema gestor de bases de datos de las plataformas LAMP, BAMP, MAMP y WAMP.</p>
-          <h5 style="color:  #F47920;">Creación de base de datos con phpMyAdmin</h5>
-          <p>Se creará una base de datos llamada ecbti para almacenar los datos que emplea el sitio web. la cual tendra una tabla llamada estudiantes con las columnas nombre, fechaNac, carrera, telefono, email.</p>
-          <h6>Creación base de datos ecbti</h6>
-          <img class="materialboxed responsive-img" src="img/1.png">
-          <h6>Creación de la tabla estudiantes</h6>
-          <img class="materialboxed responsive-img" src="img/2.png">
-          <h6>Columnas con tipo de dato más apropiado para cada columna</h6>
-          <img class="materialboxed responsive-img" src="img/3.png">
-          <p>Con esto tendriamos la base de datos lista</p>
-        </div>
+          <h4 style="color:  #F47920;">
+          	Consulta
+          </h4>
+          <h5><?php
 
+require_once 'config.php';
+
+
+
+$tildes = $con->query("SET NAMES 'utf8'"); //Para que se muestren las tildes
+
+$result = mysqli_query($con, "SELECT * FROM estudiantes");
+
+mysqli_data_seek ($result, 0);
+
+$extraido= mysqli_fetch_array($result);
+
+echo "- Nombre: ".$extraido['nombre']."<br/>";
+
+echo "- Cedula: ".$extraido['cc']."<br/>";
+
+echo "- Carrera: ".$extraido['carrera']."<br/>";
+
+echo "- Email: ".$extraido['email']."<br/>";
+
+echo "- Teléfono: ".$extraido['telefono']."<br/>";
+
+mysqli_free_result($result);
+
+mysqli_close($con);
+
+?></h5>
+          
+
+
+        </div>
 
       </div>
 
@@ -99,3 +119,5 @@
 </script>
 </body>
 </html>
+
+
