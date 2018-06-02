@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+    <title>Home</title>
 <meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/materialize.css">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/materialize.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
+
 <body>
-  	<!-- Dropdown Structure -->
+
+    <!-- Dropdown Structure -->
   <ul id="dropdown1" class="dropdown-content">
     <li><a href="Lectura1.html">MySQL</a></li>
     <li><a href="Lectura2.html">Conexión BD</a></li>
@@ -16,13 +18,12 @@
     <li><a href="Lectura4.html">Consultar Registros</a></li>
     <li><a href="Lectura5.html">Eliminar Registros</a></li>
   </ul>
-  	<nav style="background-color: #005883;">
+    <nav style="background-color: #005883;">
       <div class="nav-wrapper" style="margin-left: 20px; ">
         <a href="index.html" class="brand-logo" ><b>ECBTI</b></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="index.html">Inicio</a></li>
           <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Lecturas<i class="material-icons right">arrow_drop_down</i></a></li>
-          <li><a href="sass.html">Multimedia</a></li>
           <li><a href="sass.html">Autor</a></li>
         </ul>
       </div>
@@ -34,28 +35,34 @@
       <div class="col s9">
       <!-- Grey navigation panel -->
 
-          <h4 style="color:  #F47920;">Mostrar los datos de una consulta</h4>
-          <p>Ahora que ya sabemos como conectar con el servidor de BD y como gardar registros, veremos como mostrar los datos en pantalla</p>
-          <p>Se hará una consulta a la base de datos ecbti para que nos retorne los campos de nombre, cedula, carrera, email y telefono para mostrarlos en nuestro html, para poder realizar la consulta se creará un script llamado consultas.php al cual le incluimos la conexión de la base de datos y se realizá la consulta.</p>
-          <img class="materialboxed responsive-img" src="img/7.png">
-          <p>Pantalla de la consulta</p>
-          <img class="materialboxed responsive-img" src="img/8<img class="materialboxed responsive-img" src="img/7.png">.png">
-
+        <div class="col s12">
+          <h5 style="color:  #F47920;">Ingrese la cedula de estudiante a eliminar:</h5>
+          <form class="col s12" action="eliminar_reg.php" method="post">
+            <div class="row">
+              <div class="input-field col s12">
+                <input name="cedula" type="text" class="validate">
+                <label for="nombre">Cedula</label>  
+                <button style="background-color:  #F47920;" class="btn waves-effect waves-light" type="submit" value="cedula">Buscar</button>
+              </div>
+            </div>
+          </form>
         </div>
+      </div>
 
- 
+
 
 
       <!--menu sidebar-->
       <div class="col s3">
 
         <h2><img src="img/logo_vertical.png"></h2>
-
+        <a href="https://www.contadorvisitasgratis.com" title="contador de visitas gratis"><img src="https://counter11.allfreecounter.com/private/contadorvisitasgratis.php?c=ny27wpzpfeuqwydnzqtb8zt5z2nqcndq" border="0" title="contador de visitas gratis" alt="contador de visitas gratis"></a>
       </div>
 
     </div>
 
   </div>
+
 
 <!-- pie de pagina-->
 <footer class="page-footer" style="background-color: #005883;">
