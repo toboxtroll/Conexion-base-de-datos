@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+    <title>Home</title>
 <meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/materialize.css">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/materialize.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
-<body>
-  	<!-- Dropdown Structure -->
+
+<body style="color:  #F47920;">
+
+    <!-- Dropdown Structure -->
   <ul id="dropdown1" class="dropdown-content">
     <li><a href="Lectura1.html">MySQL</a></li>
     <li><a href="Lectura2.html">Conexión BD</a></li>
@@ -22,7 +24,6 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="index.html">Inicio</a></li>
           <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Lecturas<i class="material-icons right">arrow_drop_down</i></a></li>
-          <li><a href="sass.html">Multimedia</a></li>
           <li><a href="sass.html">Autor</a></li>
         </ul>
       </div>
@@ -32,39 +33,45 @@
     <div class="row">
 
       <div class="col s9">
-      <!-- Grey navigation panel 
-        <h2 style="color:  #F47920;" >PROGRAMACIÓN WEB 1</h2>
-        <div class="col s6"><img src="/img/php.jpg"></div>
-        <div class="col s6"><img src="/img/mysql.jpg"></div>-->
+      <!-- Grey navigation panel -->
 
         <div class="col s12">
-          <h4 style="color:  #F47920;">My SQL</h4>
-          <p>Es el sistema gestor de bases de datos de código abierto más popular en la actualidad. MySQL está disponible para distintos sistemas operativos, como Linux, Mac OS X, Solaris, Windows y otros más. MySQL es muy popular en el desarrollo de aplicaciones web, ya que forma parte como sistema gestor de bases de datos de las plataformas LAMP, BAMP, MAMP y WAMP.</p>
-          <h5 style="color:  #F47920;">Creación de base de datos con phpMyAdmin</h5>
-          <p>Se creará una base de datos llamada ecbti para almacenar los datos que emplea el sitio web. la cual tendra una tabla llamada estudiantes con las columnas nombre, fechaNac, carrera, telefono, email.</p>
-          <h6>Creación base de datos ecbti</h6>
-          <img class="materialboxed responsive-img" src="img/1.png">
-          <h6>Creación de la tabla estudiantes</h6>
-          <img class="materialboxed responsive-img" src="img/2.png">
-          <h6>Columnas con tipo de dato más apropiado para cada columna</h6>
-          <img class="materialboxed responsive-img" src="img/3.png">
-          <p>Con esto tendriamos la base de datos lista</p>
+          
+         <?php
+			require 'config.php';
+
+			$registros=mysqli_query($con, "select cc from estudiantes where cc='$_POST[cedula]'") or
+			  die("Problemas en el select:".mysqli_error($con));
+			if ($reg=mysqli_fetch_array($registros))
+			{
+			  mysqli_query($con,"delete from estudiantes where cc='$_POST[cedula]'") or
+			    die("Problemas en el select:".mysqli_error($con));
+			  echo "<h5>Se efectuó el borrado de la cedula</h5>";
+			}
+			else
+			{
+			  echo "<h5>No existe un cedula en la base de datos</h5>";
+			}
+			mysqli_close($con);
+		?>
+		<a style="background-color: #005883;" href="eliminar.php" class="waves-effect waves-light btn">Regresar</a>
         </div>
-
-
       </div>
+
+
 
 
       <!--menu sidebar-->
       <div class="col s3">
 
         <h2><img src="img/logo_vertical.png"></h2>
-
+        <a href="https://www.contadorvisitasgratis.com" title="contador de visitas gratis"><img src="https://counter11.allfreecounter.com/private/contadorvisitasgratis.php?c=ny27wpzpfeuqwydnzqtb8zt5z2nqcndq" border="0" title="contador de visitas gratis" alt="contador de visitas gratis"></a>
       </div>
 
     </div>
 
   </div>
+
 
 <!-- pie de pagina-->
 <footer class="page-footer" style="background-color: #005883;">
