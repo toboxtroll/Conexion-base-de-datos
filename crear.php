@@ -12,17 +12,21 @@
   <ul id="dropdown1" class="dropdown-content">
     <li><a href="Lectura1.html">MySQL</a></li>
     <li><a href="Lectura2.html">Conexión BD</a></li>
-    <li><a href="Lectura3.html">Registros BD</a></li>
-    <li><a href="#!">4</a></li>
-    <li><a href="#!">5</a></li>
+    <li><a href="Lectura3.html">Guardar Registros</a></li>
+    <li><a href="Lectura4.html">Consultar Registros</a></li>
+    <li><a href="Lectura5.html">Eliminar Registros</a></li>
   </ul>
-  	<nav style="background-color: #005883;">
+    <nav style="background-color: #005883;">
       <div class="nav-wrapper" style="margin-left: 20px; ">
         <a href="index.html" class="brand-logo" ><b>ECBTI</b></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="index.html">Inicio</a></li>
           <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Lecturas<i class="material-icons right">arrow_drop_down</i></a></li>
-          <li><a href="sass.html">Autor</a></li>
+          <li><a href="Multimedia.html">Multimedia</a></li>
+          <li><a href="Autor.html">Autor</a></li>
+        </ul>
+      </div>
+    </nav>
         </ul>
       </div>
     </nav>
@@ -37,7 +41,7 @@
 
     <h5 style="color:  #F47920;">Nuevo Estudiante:</h5>
 
-    <form class="col s12" action="create.php" method="post">
+    <form class="col s12" action="crearte.php" method="post">
       <div class="row">
         <div class="input-field col s6">
           <input name="nombre" type="text" class="validate">
@@ -76,6 +80,9 @@
       <div class="col s3">
 
         <h2><img src="img/logo_vertical.png"></h2>
+        <a class="twitter-timeline" data-height="400" href="https://twitter.com/UniversidadUNAD?ref_src=twsrc%5Etfw">Tweets by UniversidadUNAD</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <h5 style="color:  #F47920;">Visitas</h5>
+        <a href="https://www.contadorvisitasgratis.com" title="contador de visitas gratis"><img src="https://counter11.allfreecounter.com/private/contadorvisitasgratis.php?c=ny27wpzpfeuqwydnzqtb8zt5z2nqcndq" border="0" title="contador de visitas gratis" alt="contador de visitas gratis"></a>
 
       </div>
 
